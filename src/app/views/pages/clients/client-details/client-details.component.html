@@ -1,0 +1,253 @@
+<div>
+    <form [formGroup]="customerDetailForm">
+        <div class="row custom-mt-4rem">
+            <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12">
+                <div class="d-flex flex-column custom-mt-sm-2rem">
+                    <h3 class="custom-mb-2rem font-weight-bold mx-auto d-block custom-text-title">{{'Tipo de Usuario' | translate }}</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- <div class="custom-logo-group">
+                                <span>{{'Logo' | translate}}</span>
+                                <img disabled class="d-block mt-2" src="/assets/images/placeholder_image.png" />
+                            </div> -->
+
+                            <div class="d-flex flex-column">
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"N° Cliente" | translate}}</span>
+                                        <input disabled formControlName="clientNumber" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{'RFC' | translate }}</span>
+                                        <input disabled formControlName="rfc" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Razon Social" | translate }}</span>
+                                        <input disabled="true" formControlName="clientName" matInput />
+                                    </div>
+                                </div>
+                                <!-- <div>
+                            <div class="custom-toggle-group">
+                                <span>{{'Estatus' | translate }}</span>
+                                <mat-slide-toggle></mat-slide-toggle>
+                            </div>
+                        </div> -->
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="d-flex flex-column custom-mt-2rem">
+                    <h3 class="custom-mb-2rem font-weight-bold mx-auto d-block custom-text-title">{{"Cuenta Principal Cliente" | translate }}</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column">
+                                <div>
+                                    <div class="custom-text-group mt-0">
+                                        <span>{{'Teléfono Móvil' | translate}}</span>
+                                        <input disabled formControlName="clientMobile" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{'Correo electronico' | translate}}</span>
+                                        <input disabled formControlName="clientEmail" matInput />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12">
+                <div class="d-flex flex-column custom-mt-sm-2rem">
+                    <h3 class="custom-mb-2rem mx-auto font-weight-bold d-block custom-text-title">{{"Dirección" | translate }}</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column">
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{'Calle' | translate }}</span>
+                                        <input disabled formControlName="street" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Nº Exterior" | translate }}</span>
+                                        <input disabled formControlName="exteriorNumber" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Nº Interior" | translate }}</span>
+                                        <input disabled formControlName="interiorNumber" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Código Postal" | translate }}</span>
+                                        <input disabled formControlName="zipCode" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Colonia" | translate }}</span>
+                                        <input disabled formControlName="neighborhood" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Estado" | translate }}</span>
+                                        <input disabled formControlName="state" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Ciudad/Municipio" | translate }}</span>
+                                        <input disabled formControlName="city" matInput />
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="custom-mt-sm-2rem col-lg-4 col-xl-4 col-md-4 col-sm-12">
+                <!-- <div class="d-flex flex-column">
+                    <h3 class="custom-mb-2rem font-weight-bold mx-auto d-block custom-text-title">{{"Estatus" | translate }}</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="custom-toggle-group">
+                                <span>{{'Activo' | translate }}</span>
+                                <span _ngcontent-apk-c153="" class="switch switch-icon"><label _ngcontent-apk-c153=""><input _ngcontent-apk-c153="" disabled checked type="checkbox" name="builder[header][self][fixed][desktop]" value="true" class="ng-valid ng-dirty ng-touched"><span _ngcontent-apk-c153=""></span></label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="d-flex flex-column">
+                    <h3 class="custom-mb-2rem mx-auto d-block custom-text-title">{{"Estatus" | translate }}</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <label>Activo</label>
+                                <mat-slide-toggle type="checkbox" [(ngModel)]="ischecked" disabled [ngModelOptions]="{standalone: true}"></mat-slide-toggle>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column custom-mt-2rem">
+                    <h3 class="custom-mb-3rem mx-auto d-block custom-text-title">{{"Contacto del Cliente" | translate }}</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column">
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Nombre(s)" | translate }}</span>
+                                        <input disabled formControlName="contactName" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Apellidos Paterno" | translate }}</span>
+                                        <input disabled formControlName="contactSurname" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Apellidos Paterno" | translate }}</span>
+                                        <input disabled formControlName="contactLastname" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Telefono" | translate }}</span>
+                                        <input disabled formControlName="contactPhone" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Correo electronico" | translate }}</span>
+                                        <input disabled formControlName="contactEmail" matInput />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column custom-mt-2rem">
+                    <h3 class="custom-mb-3rem mx-auto d-block custom-text-title">{{"Cuenta clabe asignada" | translate }}</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column">
+                                <div>
+                                    <div class="custom-text-group mt-0">
+                                        <input style="text-align: center;" disabled formControlName="clabe" matInput />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex custom-mt-2rem justify-content-end">
+            <button class="btn btn-primary custom-mr-2rem" routerLink="/clients/clients-bases">{{"Agregar Base" | translate }}</button>
+            <button class="btn btn-outline-primary custom-mr-2rem" (click)="openModal()">{{"Enviar Contraseña" | translate}}</button>
+            <button class="btn btn-outline-primary" (click)="back()">{{"Regresar" | translate}}</button>
+        </div>
+
+        <kt-site-modal #modal panelClass="client-modal-container">
+            <ng-container>
+                <div class="d-flex flex-column w-75 mx-auto custom-p-3rem justify-content-center">
+
+                    <h3 class="text-center mb-2 custom-mt-3rem">{{'Cuenta Principal del Cliente' | translate }}</h3>
+                    <div class="d-flex flex-column  justify-content-center align-items-center">
+                        <div class="mb-4 w-100">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <mat-label>{{'Correo electrónico' | translate }}</mat-label>
+                                <input matInput class="p-2" />
+                                <!-- <input formControlName="rfc" matInput /> -->
+                            </mat-form-field>
+                        </div>
+
+                        <div class="custom-mb-2rem w-100">
+                            <mat-form-field class="mat-form-field-fluid">
+                                <mat-label>{{'Telefono Móvil'}}</mat-label>
+                                <input matInput class="p-2" />
+                                <!-- <input formControlName="rfc" matInput /> -->
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button (click)="closeModal()" style="border-radius:0px" class="btn btn-primary btn-block custom-py-2rem">{{"Enviar" | translate }}</button>
+                    </div>
+                    <div class="col">
+                        <button (click)="closeModal()" style="border-radius:0px" class="btn btn-link btn-block custom-py-2rem">{{"Cancelar" | translate }}</button>
+                    </div>
+                </div>
+            </ng-container>
+
+        </kt-site-modal>
+    </form>
+</div>

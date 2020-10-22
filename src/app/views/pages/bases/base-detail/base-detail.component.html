@@ -1,0 +1,164 @@
+<div>
+    <form [formGroup]="BasesDetailForm">
+        <div class="row custom-mt-4rem">
+            <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12">
+                <div class="d-flex flex-column custom-mt-sm-2rem">
+                    <h3 class="custom-mb-2rem font-weight-bold mx-auto d-block custom-text-title">{{'Alta de base' | translate }}</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column">
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"N° de Base" | translate}}</span>
+                                        <input disabled formControlName="baseNumber" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{'Nombre de la base' | translate }}</span>
+                                        <input disabled formControlName="baseName" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Cliente" | translate }}</span>
+                                        <input disabled formControlName="clientNumber" matInput />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="d-flex flex-column custom-mt-2rem">
+                    <h3 class="custom-mb-2rem font-weight-bold mx-auto d-block custom-text-title">{{"Estatus" | translate }}</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="custom-toggle-group">
+                                <span>{{'Activo' | translate }}</span>
+                                <span _ngcontent-apk-c153="" class="switch switch-icon"><label _ngcontent-apk-c153=""><input _ngcontent-apk-c153="" disabled checked type="checkbox" name="builder[header][self][fixed][desktop]" value="true" class="ng-valid ng-dirty ng-touched"><span _ngcontent-apk-c153=""></span></label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="d-flex flex-column">
+                    <h3 class="custom-mb-2rem mx-auto d-block custom-text-title">{{"Estatus" | translate }}</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <label>Activo</label>
+                                <mat-slide-toggle type="checkbox" [(ngModel)]="ischecked" disabled [ngModelOptions]="{standalone: true}"></mat-slide-toggle>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12">
+                <div class="d-flex flex-column custom-mt-sm-2rem">
+                    <h3 class="custom-mb-2rem mx-auto font-weight-bold d-block custom-text-title">{{"Ubicación de la Base" | translate }}</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column">
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{'Calle' | translate }}</span>
+                                        <input disabled formControlName="street" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Nº Exterior" | translate }}</span>
+                                        <input disabled formControlName="exteriorNumber" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Nº Interior" | translate }}</span>
+                                        <input disabled formControlName="interiorNumber" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Código Postal" | translate }}</span>
+                                        <input disabled formControlName="zipCode" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Colonia" | translate }}</span>
+                                        <input disabled formControlName="neighborhood" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Estado" | translate }}</span>
+                                        <input disabled formControlName="state" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Ciudad/Municipio" | translate }}</span>
+                                        <input disabled formControlName="city" matInput />
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="custom-mt-sm-2rem col-lg-4 col-xl-4 col-md-4 col-sm-12">
+                <div class="d-flex flex-column">
+                    <h3 class="custom-mb-3rem mx-auto d-block custom-text-title">{{"Datos del Contacto de la Base" | translate }}</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column">
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Nombre(s)" | translate }}</span>
+                                        <input disabled formControlName="contactName" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Apellidos Paterno" | translate }}</span>
+                                        <input disabled formControlName="contactSurname" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Apellidos Paterno" | translate }}</span>
+                                        <input disabled formControlName="contactLastname" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Telefono" | translate }}</span>
+                                        <input disabled formControlName="contactPhone" matInput />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="custom-text-group">
+                                        <span>{{"Correo electronico" | translate }}</span>
+                                        <input disabled formControlName="contactEmail" matInput />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex custom-mt-2rem justify-content-end">
+            <button class="btn btn-outline-primary" (click)="back()">{{"Regresar" | translate}}</button>
+        </div>
+    </form>
+</div>

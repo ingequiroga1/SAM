@@ -1,0 +1,254 @@
+<div>
+    <form [formGroup]="customerForm">
+        <div class="row custom-mt-4rem">
+            <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12">
+                <div class="d-flex flex-column custom-mt-sm-2rem">
+                    <h3 class="custom-mb-2rem font-weight-bold mx-auto d-block custom-text-title">{{'Datos Fiscales del Cliente' | translate }}</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="custom-logo-group">
+                                <span>{{'Logo' | translate}}</span>
+                                <label for="imageUpload"> 
+                            <mat-form-field class="mat-form-field-fluid">
+                                <img   class="d-block mt-2 custom-image-upload-img" src="/assets/images/placeholder_image.png" /> 
+                                <ngx-mat-file-input (change)="uploadimg($event)"></ngx-mat-file-input>
+                            </mat-form-field>  
+                        </label>
+
+                            </div>
+
+                            <div class="d-flex flex-column">
+                                <div>
+                                    <mat-form-field class="mat-form-field-fluid">
+                                        <mat-label>{{"N° Cliente" | translate}}*</mat-label>
+                                        <!-- <input formControlName="clientNumber" matInput /> -->
+                                        <input disabled matInput />{{nextNumberCustomer}}
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="mat-form-field-fluid">
+                                        <mat-label>{{'RFC' | translate }}*</mat-label>
+                                        <input formControlName="rfc" matInput />
+                                        <mat-error>Agrega el
+                                            <strong>RFC correctamente</strong>
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="mat-form-field-fluid">
+                                        <mat-label>{{"Razón Social" | translate }}*</mat-label>
+                                        <input formControlName="clientName" matInput />
+                                        <mat-error>Agrega la
+                                            <strong>Razón Social correctamente</strong>
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="d-flex flex-column custom-mt-2rem">
+                    <h3 class="custom-mb-2rem font-weight-bold mx-auto d-block custom-text-title">{{"Cuenta Principal Cliente" | translate }}</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column">
+                                <div>
+                                    <mat-form-field class="mat-form-field-fluid">
+                                        <mat-label>{{'Teléfono Móvil' | translate}}*</mat-label>
+                                        <input formControlName="clientMobile" matInput />
+                                        <mat-error>Agrega el
+                                            <strong>teléfono correctamente</strong>
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="mat-form-field-fluid">
+                                        <mat-label>{{'Correo electrónico' | translate}}*</mat-label>
+                                        <input formControlName="clientEmail" matInput />
+                                        <mat-error>Email es
+                                            <strong>requerido</strong>
+                                        </mat-error>
+                                        <mat-hint align="start">Por favor ingresa el
+                                            <strong>Email</strong>
+                                        </mat-hint>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-xl-4 col-md-4 col-sm-12">
+                <div class="d-flex flex-column custom-mt-sm-2rem">
+                    <h3 class="custom-mb-2rem mx-auto font-weight-bold d-block custom-text-title">{{"Dirección" | translate }}</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column">
+                                <div>
+                                    <mat-form-field class="mat-form-field-fluid">
+                                        <mat-label>{{'Calle' | translate }}*</mat-label>
+                                        <input formControlName="street" matInput />
+                                        <mat-error>Agrega la
+                                            <strong>calle correctamente</strong>
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="mat-form-field-fluid">
+                                        <mat-label>{{"Nº Exterior" | translate }}*</mat-label>
+                                        <input formControlName="exteriorNumber" matInput />
+                                        <mat-error>Agrega el
+                                            <strong>número exterior correctamente</strong>
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="mat-form-field-fluid">
+                                        <mat-label>{{"Nº Interior" | translate }}*</mat-label>
+                                        <input formControlName="interiorNumber" matInput />
+                                        <mat-error>Agrega el
+                                            <strong>número interior correctamente</strong>
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="mat-form-field-fluid">
+                                        <mat-label>{{"Código Postal"| translate }}*</mat-label>
+                                        <input formControlName="zipCode" matInput />
+                                        <mat-error>Agrega el
+                                            <strong>código postal correctamente</strong>
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="mat-form-field-fluid">
+                                        <mat-label>{{"Colonia"| translate }}*</mat-label>
+                                        <input formControlName="neighborhood" matInput />
+                                        <mat-error>Agrega la
+                                            <strong>colonia correctamente</strong>
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="mat-form-field-fluid">
+                                        <mat-label>{{"Estado" | translate }}*</mat-label>
+                                        <input formControlName="state" matInput />
+                                        <mat-error>Agrega el
+                                            <strong>estado correctamente</strong>
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="mat-form-field-fluid">
+                                        <mat-label>{{"Ciudad/Municipio"| translate }}*</mat-label>
+                                        <input formControlName="city" matInput />
+                                        <mat-error>Agrega la
+                                            <strong>ciudad correctamente</strong>
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="custom-mt-sm-2rem col-lg-4 col-xl-4 col-md-4 col-sm-12">
+                <!-- <div class="d-flex flex-column">
+                    <h3 class="custom-mb-2rem font-weight-bold mx-auto d-block custom-text-title">{{"Estatus" | translate }}</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="custom-toggle-group">
+                                <span>{{'Activo' | translate }}</span>
+                                <span _ngcontent-apk-c153="" class="switch switch-icon"><label _ngcontent-apk-c153=""><input _ngcontent-apk-c153="" checked type="checkbox" name="builder[header][self][fixed][desktop]" value="true" class="ng-valid ng-dirty ng-touched"><span _ngcontent-apk-c153=""></span></label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="d-flex flex-column">
+                    <h3 class="custom-mb-2rem mx-auto d-block custom-text-title">{{"Estatus" | translate }}</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <label>Activo</label>
+                                <mat-slide-toggle [(ngModel)]="ischecked" [ngModelOptions]="{standalone: true}"></mat-slide-toggle>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column custom-mt-2rem">
+                    <h3 class="custom-mb-3rem mx-auto d-block custom-text-titl e">{{"Contacto del Cliente" | translate }}</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column">
+                                <div>
+                                    <mat-form-field class="mat-form-field-fluid">
+                                        <mat-label>{{"Nombre(s)"| translate }}*</mat-label>
+                                        <input formControlName="contactName" matInput />
+                                        <mat-error>Agrega el
+                                            <strong>nombre correctamente</strong>
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="mat-form-field-fluid">
+                                        <mat-label>{{"Apellido Paterno"| translate }}*</mat-label>
+                                        <input formControlName="contactSurname" matInput />
+                                        <mat-error>Agrega el
+                                            <strong>apellido correctamente</strong>
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="mat-form-field-fluid">
+                                        <mat-label>{{"Apellido Materno"| translate }}*</mat-label>
+                                        <input formControlName="contactLastname" matInput />
+                                        <mat-error>Agrega el
+                                            <strong>apellido materno correctamente</strong>
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="mat-form-field-fluid">
+                                        <mat-label>{{"Teléfono"| translate }}*</mat-label>
+                                        <input formControlName="contactPhone" matInput />
+                                        <mat-error>Agrega el
+                                            <strong>teléfono correctamente</strong>
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                                <div>
+                                    <mat-form-field class="mat-form-field-fluid">
+                                        <mat-label>{{"Correo electrónico"| translate }}*</mat-label>
+                                        <input formControlName="contactEmail" matInput />
+                                        <mat-error>Agrega el
+                                            <strong>email correctamente</strong>
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex custom-mt-2rem justify-content-end">
+            <button class="btn btn-primary custom-mr-2rem" (click)="onSumbit(false)">{{"Guardar" | translate }}</button>
+            <button class="btn btn-outline-primary" (click)="back()">{{"Cancelar" | translate}}</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,302 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Global vendors
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~material-design-icons/iconfont/material-icons.css";
+@import "~highlight.js/styles/googlecode.css";
+@import "~perfect-scrollbar/css/perfect-scrollbar.css";
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+// Global fonts
+@import "~socicon/css/socicon.css";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import "./assets/plugins/flaticon/flaticon.css";
+@import "./assets/plugins/flaticon2/flaticon.css";
+@import "./assets/plugins/keenthemes-icons/font/ki.css";
+// Metronic styles
+@import "./assets/sass/style.angular.scss";
+@import "./assets/sass/vendors/angular/material/angular-material";
+@import "./assets/sass/vendors/angular/material/include";
+// Default Layout themes
+@import "./assets/sass/themes/layout/header/base/light.scss";
+@import "./assets/sass/themes/layout/header/menu/light.scss";
+@import "./assets/sass/themes/layout/brand/light.scss";
+@import "./assets/sass/themes/layout/aside/light.scss";
+@import "./custom_utils";
+// Header themes
+// .header-base-light {
+//     @import "./assets/sass/themes/layout/header/base/light.scss";
+// }
+// .header-base-dark {
+//     @import "./assets/sass/themes/layout/header/base/dark.scss";
+// }
+// Header Menu themes
+// .header-menu-light {
+//     @import "./assets/sass/themes/layout/header/menu/light.scss";
+// }
+// .header-menu-dark {
+//     @import "./assets/sass/themes/layout/header/menu/dark.scss";
+// }
+// Brand themes
+.brand-dark {
+    @import "./assets/sass/themes/layout/brand/dark.scss";
+}
+
+.brand-light {
+    @import "./assets/sass/themes/layout/brand/light.scss";
+}
+
+// Aside themes
+// .aside-dark {
+//   @import "./assets/sass/themes/layout/aside/dark.scss";
+// }
+// .aside-light {
+//   @import "./assets/sass/themes/layout/aside/light.scss";
+// }
+//hide bootstrap dropdown arrow globally
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.mat-table-wrapper-dashboard .mat-table {
+    min-width: 600px !important;
+    width: 100% !important;
+}
+
+.position-static {
+    position: static;
+}
+
+.dropdown-fluid {
+    height: 100%;
+    .topbar-item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+
+.mat-dialog-container {
+    padding: 0 !important;
+}
+
+
+/*
+Custom Override start here
+*/
+
+.btn.btn-primary {
+    color: #fff;
+    background-color: #4b60ff;
+    border-color: #4b60ff;
+}
+
+.btn.btn-outline-primary {
+    border-color: #4b60ff;
+    color: #4b60ff;
+}
+
+.btn.btn-primary:hover {
+    color: #fff;
+    background-color: #3443b1;
+    border-color: #3443b1;
+}
+
+.mat-table-wrapper .mat-table .mat-row {
+    border-right: 10px solid #4bcc6d;
+    border-radius: 10px;
+    margin-bottom: 0.625rem;
+    padding: 1.25rem;
+}
+
+.mat-header-row {
+    padding: 1.25rem;
+    color: #2a2e43
+}
+
+// .mat-slide-toggle-bar {
+//   background-color: #00cd98;
+//   padding: 0.625rem;
+// }
+.mat-slide-toggle-bar {
+    background-color: #FF4081;
+    padding: 0.625rem;
+}
+
+.mat-slide-toggle-thumb {
+    background-color: #FF4081;
+}
+
+.mat-form-field-type-mat-input,
+.mat-form-field-type-mat-select {
+    .mat-form-field-label-wrapper {
+        border-bottom: 1px solid #b7b7b7;
+    }
+}
+
+//  forgot password dialog css
+.forgot-password-container {
+    max-width: 520px !important;
+    height: 385px !important;
+    @extend custom-app-border-style;
+    border-top: 3px solid;
+    mat-dialog-container {
+        overflow: visible;
+    }
+}
+
+.client-modal-container {
+    max-width: 520px !important;
+    height: 391px !important;
+    @extend custom-app-border-style;
+    border-top: 3px solid;
+    mat-dialog-container {
+        overflow: visible;
+    }
+}
+
+.custom-subheader {
+    height: 60px;
+    &-background-white {
+        background-color: #fff;
+    }
+    &-background-topbar {
+        background-color: #292e42;
+    }
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        align-items: center;
+        height: 100%;
+    }
+    &-title {
+        padding: 0px;
+        margin: 0px;
+        font-size: 1.3rem;
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    &-subtitle {
+        padding: 0px;
+        margin: 0px;
+        font-size: 1.2rem;
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    &-link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1rem;
+        margin-right: 40px;
+    }
+    &-field {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        width: 50px;
+        text-decoration: none;
+        label {
+            color: #fff !important;
+        }
+        margin-right:40px;
+    }
+    &-image {
+        margin-right: 20px;
+    }
+    &-btn-topbar {
+        color: white !important;
+        text-decoration: none !important;
+        &-line {
+            width: 100%;
+            height: 3px;
+            @extend custom-app-background-style;
+            margin-bottom: 0.625rem;
+        }
+    }
+}
+
+.mat-form-field-ripple {
+    @extend custom-app-border-style;
+    background-color: transparent !important;
+    border-bottom: 3px solid !important;
+}
+
+.dashboard-image {
+    position: absolute;
+    top: 60%;
+    left: -5%;
+    transform: translateY(-50%);
+}
+
+// .mat-cell.cdk-column-Acciones.mat-column-Acciones  {
+//   flex: 0 0 18% !important;  
+// }
+// .mat-header-cell.cdk-column-Acciones.mat-column-Acciones {
+//   flex: 0 0 18% !important;  
+// }
+.mat-cell {
+    text-align: center !important;
+    overflow-wrap: break-word !important;
+    &.cdk-column-Acciones {
+        &.mat-column-Acciones {
+            flex: 0 0 18% !important;
+        }
+    }
+}
+
+.mat-header-cell {
+    color: #2a2e43 !important;
+    font-weight: 800 !important;
+    button {
+        color: #2a2e43 !important;
+        font-weight: 800 !important;
+        ;
+    }
+    .mat-sort-header-container {
+        text-align: center !important;
+        overflow-wrap: break-word !important;
+    }
+    &.cdk-column-Acciones {
+        &.mat-column-Acciones {
+            flex: 0 0 18% !important;
+        }
+    }
+}
+
+mat-paginator {
+    display: block;
+    width: 100%;
+    .mat-paginator-container {
+        justify-content: space-between !important;
+    }
+}
+
+.mat-form-field-label {
+    &.mat-empty {
+        &.mat-form-field-empty {
+            mat-label {
+                display: inline-block;
+                font-weight: 800 !important;
+            }
+        }
+    }
+    mat-label {
+        display: inline-block;
+        font-weight: 800 !important;
+        color: rgba(0, 0, 0, 0.54) !important;
+    }
+}
+
+@media(max-width:991px) {
+    .custom-subheader {
+        display: none;
+    }
+}

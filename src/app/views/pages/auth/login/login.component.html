@@ -1,0 +1,18 @@
+<div class="d-flex flex-column-fluid flex-center mt-30 mt-lg-0 custom-height-100vh">
+    <!--begin::Signin-->
+    <div class="login-form login-signin m-auto">
+        <div class="text-center mb-1">
+            <img class="margin-4rem" src="/assets/images/logo.png" />
+        </div>
+        <div class="text-align-center d-flex custom-mt-4rem">
+            <button id="kt_login_signin_submit" (click)="login()" [ngClass]="{
+            'spinner spinner-right spinner-md spinner-light': loading
+          }" class="btn btn-primary font-weight-bold px-9 py-4 my-3 m-auto custom-btn-grow-0_4">{{ "Iniciar Sesión" | translate }}</button><br>
+        </div>
+        <div style="margin-top: 100px;" class="text-center mt-20">
+            <a href="#">Términos de uso.</a>
+            <a href="#"> Política de privacidad</a>
+        </div>
+    </div>
+    <!--end::Signin-->
+</div>

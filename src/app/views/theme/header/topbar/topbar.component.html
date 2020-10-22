@@ -1,0 +1,39 @@
+<!-- begin:: Header Topbar -->
+<ng-container>
+    <ng-container *ngIf="searchDisplay">
+        <!--begin: Search -->
+        <!-- <kt-search-dropdown  [icon]="'./assets/media/svg/icons/General/Search.svg'" [useSVG]="true"></kt-search-dropdown> -->
+        <!--end: Search -->
+    </ng-container>
+
+
+    <ng-container *ngIf="userDisplay">
+        <ng-container *ngIf="userLayout === 'dropdown'">
+            <kt-user-profile [userDropdownStyle]="userDropdownStyle"></kt-user-profile>
+        </ng-container>
+        <ng-container *ngIf="userLayout === 'offcanvas'">
+            <!--begin: User bar -->
+            <kt-user-profile4></kt-user-profile4>
+            <!--end: User bar -->
+        </ng-container>
+    </ng-container>
+
+    <!-- <div class="d-flex align-items-center">
+    <label>{{"Base:" | translate }}</label>
+    &nbsp;
+    <mat-form-field class="mat-form-field-fluid">
+      <mat-select>
+          <mat-option value="1">
+              {{ "Puerto Interior" | translate }}
+          </mat-option>
+          <mat-option value="2">
+            {{ "Puerto Interior" | translate }}
+          </mat-option>
+          <mat-option value="3">
+            {{ "Puerto Interior" | translate }}
+          </mat-option>
+      </mat-select>
+  </mat-form-field>
+  </div> -->
+</ng-container>
+<!-- end:: Header Topbar -->
